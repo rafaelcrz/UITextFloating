@@ -1,0 +1,6 @@
+framework module UITextFloating {
+  umbrella header "UITextFloating-umbrella.h"
+
+  export *
+  module * { export * }
+}

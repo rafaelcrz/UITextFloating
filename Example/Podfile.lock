@@ -1,0 +1,16 @@
+PODS:
+  - UITextFloating (0.1.0)
+
+DEPENDENCIES:
+  - UITextFloating (from `../`)
+
+EXTERNAL SOURCES:
+  UITextFloating:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  UITextFloating: ced6dd10757f36b33d78129ed0157823272882ad
+
+PODFILE CHECKSUM: 77fec8cdb0f501ba3a98e6c7d9aafea0377e05a6
+
+COCOAPODS: 1.7.3
