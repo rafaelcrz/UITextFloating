@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'UITextFloating_Example' do
+  pod 'UITextFloating', :path => '../'
+
+  target 'UITextFloating_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
