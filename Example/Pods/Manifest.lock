@@ -1,16 +1,24 @@
 PODS:
-  - UITextFloating (0.1.0)
+  - lottie-ios (3.1.1)
+  - UITextFloating (0.1.0):
+    - lottie-ios
 
 DEPENDENCIES:
+  - lottie-ios
   - UITextFloating (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - lottie-ios
 
 EXTERNAL SOURCES:
   UITextFloating:
     :path: "../"
 
 SPEC CHECKSUMS:
-  UITextFloating: ced6dd10757f36b33d78129ed0157823272882ad
+  lottie-ios: 43a472d22b2dd2bed292cc4010c0b4d2e66d3ba8
+  UITextFloating: e321e09d982134c4bcfd4b795c167c61b4f13ab3
 
-PODFILE CHECKSUM: 77fec8cdb0f501ba3a98e6c7d9aafea0377e05a6
+PODFILE CHECKSUM: c87f85dd2c6b0dfb9f73ac5c45a142aff69e7905
 
 COCOAPODS: 1.7.3

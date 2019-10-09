@@ -16,7 +16,13 @@
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
-  "source_files": "UITextFloating/Classes/**/*"
+  "source_files": "UITextFloating/Classes/**/*",
+  "resources": "UITextFloating/**/*.xib",
+  "dependencies": {
+    "lottie-ios": [
+
+    ]
+  }
 }
