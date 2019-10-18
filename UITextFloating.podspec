@@ -28,9 +28,12 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/rafaelcrz/UITextFloating.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'UITextFloating/Classes/**/*'
+  s.resources = 'UITextFloating/**/*.xib'
+  
+  s.dependency 'lottie-ios'
   
   # s.resource_bundles = {
   #   'UITextFloating' => ['UITextFloating/Assets/*.png']

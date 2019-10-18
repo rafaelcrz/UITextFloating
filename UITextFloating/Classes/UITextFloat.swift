@@ -15,8 +15,7 @@ protocol UITextFloatDelegate {
     func uiTextFieldChanging(_ textFloat: UITextFloat, _ textField: UITextField)
 }
 
-@IBDesignable
-class UITextFloat: UIView {
+public class UITextFloat: UIView {
     
     var delegate: UITextFloatDelegate?
     
@@ -32,9 +31,11 @@ class UITextFloat: UIView {
     
     private var errorAnimationView: AnimationView?
     
-    func getUIText() -> UITextField {
-        return self.uiTextFieldValue
-    }
+    private var appearance: UITextFloatAppearance?
+    
+//    func text() -> String? {
+//        return self.uiTextFieldValue.text
+//    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -46,14 +47,15 @@ class UITextFloat: UIView {
         self.initFromNib()
     }
     
-//    override func prepareForInterfaceBuilder() {
-//        self.initFromNib()
-//    }
+    open func setup(appearance: UITextFloatAppearance) {
+        self.appearance = appearance
+        self.uiTextFieldValue.textColor = appearance.textColor
+    }
     
-    var text: String = "" {
+    open var text: String? {
         didSet {
             self.uiTextFieldValue.text = self.text
-            if !self.text.isEmpty {
+            if !(self.text?.isEmpty ?? true) {
                 self.uiLabelFloat.transform = .init(translationX: .zero, y: -(uiEditHeight))
             } else {
                 self.uiLabelFloat.transform = .identity
@@ -61,8 +63,8 @@ class UITextFloat: UIView {
         }
     }
     
-    @IBInspectable
-    var floatLabel: String? = "" {
+//    @IBInspectable
+    open var floatLabel: String? = "" {
         didSet {
             self.uiLabelFloat.text = self.floatLabel
         }
@@ -135,7 +137,7 @@ class UITextFloat: UIView {
     @objc
     func uiTextFieldChanging(_ textField: UITextField) {
         self.delegate?.uiTextFieldChanging(self, textField)
-        self.uiViewLine.backgroundColor = UIColor(named: "AppBlueMain")
+//        self.uiViewLine.backgroundColor = UIColor(named: "AppBlueMain")
     }
     
     @objc
