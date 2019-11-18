@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -24,16 +24,16 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pi6-6d-QzL">
                     <rect key="frame" x="0.0" y="8" width="204" height="113"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6nd-jl-t79">
-                            <rect key="frame" x="0.0" y="60" width="180" height="30"/>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="testnado valor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6nd-jl-t79">
+                            <rect key="frame" x="0.0" y="64" width="180" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="9LX-wP-kWv"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KF4-BN-tiy">
-                            <rect key="frame" x="0.0" y="69" width="204" height="17"/>
+                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KF4-BN-tiy">
+                            <rect key="frame" x="0.0" y="47" width="204" height="17"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -73,8 +73,8 @@
                         <constraint firstItem="w7a-UA-soE" firstAttribute="leading" secondItem="Pi6-6d-QzL" secondAttribute="leading" id="Sqa-rD-HRn"/>
                         <constraint firstAttribute="trailing" secondItem="KF4-BN-tiy" secondAttribute="trailing" id="d0i-9l-zEt"/>
                         <constraint firstItem="KF4-BN-tiy" firstAttribute="leading" secondItem="Pi6-6d-QzL" secondAttribute="leading" id="jHH-CN-lfN"/>
-                        <constraint firstItem="dYL-yW-OxC" firstAttribute="top" secondItem="6nd-jl-t79" secondAttribute="bottom" constant="4" id="mLx-hf-FRH"/>
-                        <constraint firstItem="dYL-yW-OxC" firstAttribute="top" secondItem="KF4-BN-tiy" secondAttribute="bottom" constant="8" id="rKq-Qq-I4d"/>
+                        <constraint firstItem="dYL-yW-OxC" firstAttribute="top" secondItem="6nd-jl-t79" secondAttribute="bottom" id="mLx-hf-FRH"/>
+                        <constraint firstItem="6nd-jl-t79" firstAttribute="top" secondItem="KF4-BN-tiy" secondAttribute="bottom" id="rKq-Qq-I4d"/>
                         <constraint firstAttribute="trailing" secondItem="xMm-T3-Cdn" secondAttribute="trailing" id="sT9-kK-Ev5"/>
                         <constraint firstItem="w7a-UA-soE" firstAttribute="top" secondItem="dYL-yW-OxC" secondAttribute="bottom" constant="2" id="uOS-e8-hOz"/>
                         <constraint firstItem="xMm-T3-Cdn" firstAttribute="leading" secondItem="6nd-jl-t79" secondAttribute="trailing" constant="4" id="uRJ-Tf-czi"/>
