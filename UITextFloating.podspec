@@ -32,8 +32,7 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'UITextFloating/Classes/**/*'
   s.resources = 'UITextFloating/**/*.xib'
-  
-  s.dependency 'lottie-ios'
+
   
   # s.resource_bundles = {
   #   'UITextFloating' => ['UITextFloating/Assets/*.png']
