@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import Lottie
 
 protocol UITextFloatDelegate {
     func inputValidation(_ textFloat: UITextFloat, isValid: Bool)
@@ -28,9 +27,7 @@ public class UITextFloat: UIView {
     private let nibName = String(describing: UITextFloat.self)
     private var isValid: Bool = false
     private var uiEditHeight: CGFloat = 0
-    
-    private var errorAnimationView: AnimationView?
-    
+        
     private var appearance: UITextFloatAppearance?
     
 //    func text() -> String? {
@@ -56,9 +53,9 @@ public class UITextFloat: UIView {
         didSet {
             self.uiTextFieldValue.text = self.text
             if !(self.text?.isEmpty ?? true) {
-                self.uiLabelFloat.transform = .init(translationX: .zero, y: -(uiEditHeight))
+//                self.uiLabelFloat.transform = .init(translationX: .zero, y: -(uiEditHeight))
             } else {
-                self.uiLabelFloat.transform = .identity
+//                self.uiLabelFloat.transform = .identity
             }
         }
     }
@@ -93,6 +90,12 @@ public class UITextFloat: UIView {
         }
     }
     
+    public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        
+//        self.uiTextFieldValue.becomeFirstResponder()
+    }
+    
     func initFromNib() {
         guard let viewNib = Bundle(for: type(of: self)).loadNibNamed(self.nibName, owner: self, options: [:])?.first as? UIView else {
             return
@@ -110,19 +113,14 @@ public class UITextFloat: UIView {
         self.uiLabelErrorMessage.alpha = 0
         self.uiEditHeight = self.uiTextFieldValue.frame.height
         
-        self.errorAnimationView = AnimationView(name: "error_animation")
-        self.errorAnimationView?.frame = self.uiViewState.bounds
-        if let animation = self.errorAnimationView {
-            self.uiViewState.addSubview(animation)
-            animation.play()
-            self.uiViewState.alpha = 0
-        }
         
+        
+       
     }
     
     @objc
     func willKeyBoardShow(notification: Notification) {
-        self.uiLabelFloat.transform = .init(translationX: .zero, y: -(uiEditHeight))
+//        self.uiLabelFloat.transform = .init(translationX: .zero, y: -(uiEditHeight))
     }
     
     @objc
@@ -130,7 +128,7 @@ public class UITextFloat: UIView {
         let textValue: String = self.uiTextFieldValue.text ?? ""
         
         if textValue.isEmpty {
-            self.uiLabelFloat.transform = .identity
+//            self.uiLabelFloat.transform = .identity
         }
     }
     
@@ -159,27 +157,15 @@ public class UITextFloat: UIView {
     }
     
     func errorState(){
-        self.errorAnimationView?.play()
-        UIView.animate(withDuration: 0.2) {
-            self.uiLabelErrorMessage.alpha = 1
-            self.uiViewLine.backgroundColor = .red
-            self.uiViewState.alpha = 1
-        }
+        self.uiLabelErrorMessage.alpha = 1
+        self.uiViewLine.backgroundColor = .red
+        self.uiViewState.alpha = 1
     }
     func successState() {
-        self.addAnimation(name: "success_animation")
     }
     func clearState() {
         self.uiLabelErrorMessage.alpha = 0
         self.uiViewState.alpha = 0
-    }
-    
-    func addAnimation(name: String) {
-        if let animation = self.errorAnimationView {
-            animation.removeFromSuperview()
-            self.uiViewState.addSubview(animation)
-            animation.play()
-        }
     }
     
     func addObservers() {
