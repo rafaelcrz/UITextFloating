@@ -101,9 +101,20 @@ public class UITextFloat: UIView {
             return
         }
         
-        viewNib.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        //viewNib.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         viewNib.frame = self.bounds
         addSubview(viewNib)
+        
+        viewNib.translatesAutoresizingMaskIntoConstraints = false
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[childView]|",
+                                                      options: [],
+                                                      metrics: nil,
+                                                      views: ["childView": viewNib]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[childView]|",
+                                                      options: [],
+                                                      metrics: nil,
+                                                      views: ["childView": viewNib]))
+        
         
         self.addObservers()
         self.uiViewState.backgroundColor = .clear
@@ -178,3 +189,5 @@ public class UITextFloat: UIView {
     }
     
 }
+
+
