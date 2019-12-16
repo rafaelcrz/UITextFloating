@@ -27,26 +27,22 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for input in inputs {
-            let textField = UITextFloat(frame: CGRect(x: 0, y: 0, width: stackView.frame.width, height: 60))
-            textField.floatLabel = input
-            //                textField.errorLabel = input
-            stackView.addArrangedSubview(textField)
-        }
+        UITextFloatAppearance.shared.lineDefaultColor = .green
+        UITextFloatAppearance.shared.lineTypingColor = .red
+        UITextFloatAppearance.shared.lineErrorColor = .purple
+        UITextFloatAppearance.shared.titleColor = .black
         
-        //
-        //        let appearance = UITextFloatAppearance.shared
-        //            .setTextColor(.red)
-        //            .setLineTypingColor(.green)
-        //
-        //        float1.setup(appearance: appearance)
-        //
-        //        uiFloatTextA.addSubview(float1)
+        let fieldName = UITextFloat(frame: CGRect(x: 0, y: 0, width: stackView.frame.width, height: 60))
+        fieldName.floatLabel = "Full name"
+        fieldName.secureTextEntry = true
+        let fieldEmail = UITextFloat(frame: CGRect(x: 0, y: 0, width: stackView.frame.width, height: 60))
+        fieldEmail.floatLabel = "E-mail"
+        fieldEmail.errorLabel = "Parece que esse e-mail não é valido"
+        let fieldAge = UITextFloat(frame: CGRect(x: 0, y: 0, width: stackView.frame.width, height: 60))
+        fieldAge.floatLabel = "Age"
+        stackView.addArrangedSubview(fieldName)
+        stackView.addArrangedSubview(fieldEmail)
+        stackView.addArrangedSubview(fieldAge)
         
     }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        //        view.endEditing(true)
-    }
-    
 }
