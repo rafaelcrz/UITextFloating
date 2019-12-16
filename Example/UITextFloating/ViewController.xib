@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="UITextFloating_Example" customModuleProvider="target">
             <connections>
-                <outlet property="uiFloatTextA" destination="Y4W-N1-kLu" id="RmB-j1-BZI"/>
+                <outlet property="stackView" destination="Pui-qo-AGi" id="vfu-Jd-V3F"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,34 +19,21 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ft-MM-JUf">
-                    <rect key="frame" x="0.0" y="40" width="414" height="696"/>
-                    <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y4W-N1-kLu" customClass="UITextFloat" customModule="UITextFloating">
-                            <rect key="frame" x="16" y="16" width="382" height="48"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="48" id="euB-S6-f5E"/>
-                            </constraints>
-                        </view>
-                    </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Pui-qo-AGi">
+                    <rect key="frame" x="20" y="20" width="374" height="0.0"/>
                     <constraints>
-                        <constraint firstItem="Y4W-N1-kLu" firstAttribute="leading" secondItem="3Ft-MM-JUf" secondAttribute="leading" constant="16" id="7A2-Ss-gcc"/>
-                        <constraint firstAttribute="trailing" secondItem="Y4W-N1-kLu" secondAttribute="trailing" constant="16" id="RbC-kb-yJh"/>
-                        <constraint firstItem="Y4W-N1-kLu" firstAttribute="top" secondItem="3Ft-MM-JUf" secondAttribute="top" constant="16" id="ivU-ln-kI0"/>
+                        <constraint firstAttribute="height" priority="250" id="yfC-0g-wVc"/>
                     </constraints>
-                </view>
+                </stackView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="3Ft-MM-JUf" secondAttribute="bottom" id="Oec-co-KdJ"/>
-                <constraint firstItem="3Ft-MM-JUf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="Xg2-Z3-gJd"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3Ft-MM-JUf" secondAttribute="trailing" id="gMA-zc-qFj"/>
-                <constraint firstItem="3Ft-MM-JUf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="tOf-OB-hrU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Pui-qo-AGi" secondAttribute="trailing" constant="20" id="6zn-xZ-BfR"/>
+                <constraint firstItem="Pui-qo-AGi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="OZQ-eL-8PW"/>
+                <constraint firstItem="Pui-qo-AGi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="RTH-NI-q4G"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="139" y="114"/>
+            <point key="canvasLocation" x="137.68115942028987" y="113.31521739130436"/>
         </view>
     </objects>
 </document>
