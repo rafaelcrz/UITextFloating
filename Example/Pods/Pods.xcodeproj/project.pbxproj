@@ -8,15 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		11C48BF7383DFDD3C12DFE150049B449 /* Pods-UITextFloating_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 00033D76F810FB17CD85E4A7090787C4 /* Pods-UITextFloating_Tests-dummy.m */; };
-		2C719374294198F47D0EB9D2E4D23E8B /* UITextFloating-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 508976616045D394DFE5D09FE04A0B4A /* UITextFloating-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2FC7A462172D6BEB6C5DEE28201171C1 /* UITextFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E635D7BA07EAA894A440542E6567DD /* UITextFloat.swift */; };
+		34C5F92AE96F3F8E509BF6F21353F75D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEFE98B17B9BC0268D309B7C6469E740 /* Images.xcassets */; };
 		3B82B50DDF038BEF498CF4AE9315292E /* Pods-UITextFloating_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F377948A723B060231189EC193C997 /* Pods-UITextFloating_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		572674500DBD147780064584F0521513 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		667FED8E479403E759694C66E0E814AD /* UITextFloating-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F97A478CC78D08B6302118FA204747E /* UITextFloating-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		843F2C9E2B52B9FB64A0C06407B698DB /* Pods-UITextFloating_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3D09865E7C200D155AA71FCED9E6DC /* Pods-UITextFloating_Example-dummy.m */; };
-		A6FC7152DFD0470103B62F5307CB7955 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681116CC797C201D5F3CE2476ECD5E10 /* ReplaceMe.swift */; };
-		ADC4CF54B7485AD5129132F8A6A3EB47 /* UITextFloating-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D8BFFBF28599DE49438E36B1693F90 /* UITextFloating-dummy.m */; };
 		AFBE5CB0AF4C6C65FEB208BBF5964BB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		C4F5C7D8DB38582688BD3A17FFB99AB4 /* UITextFloatAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8809BC98BF5DE6E49429179C973BD0BE /* UITextFloatAppearance.swift */; };
 		E310E330F5D4EB1F8EA366C92C8F58B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		EF274EA01AC0AE83A3A86AED318C5125 /* Pods-UITextFloating_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D85981D97BE5AB727BBEEBCD29C2B0FF /* Pods-UITextFloating_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F22578EC92A1BA932337BBFB6DAEBD37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		F4698C96C2C902FDC102FA10132DD64C /* UITextFloating-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9562FBCD5BEABA39202A25D7CE2FB8E3 /* UITextFloating-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,51 +42,53 @@
 		00033D76F810FB17CD85E4A7090787C4 /* Pods-UITextFloating_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UITextFloating_Tests-dummy.m"; sourceTree = "<group>"; };
 		00D5B1CDC68114F74FE9FA3920FE4DE7 /* Pods-UITextFloating_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UITextFloating_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		00F377948A723B060231189EC193C997 /* Pods-UITextFloating_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UITextFloating_Example-umbrella.h"; sourceTree = "<group>"; };
+		16E1F223E5CE08484B51D737CCB65C6E /* UITextFloating-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextFloating-prefix.pch"; sourceTree = "<group>"; };
 		1768F2DE71D0E789438286A5F25CCA1F /* Pods-UITextFloating_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UITextFloating_Example-Info.plist"; sourceTree = "<group>"; };
 		17ACCB2A9E55397DC47188051CAD87CE /* Pods-UITextFloating_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-UITextFloating_Tests.modulemap"; sourceTree = "<group>"; };
 		24F3B1FAAAD81FEC65AE247DDD0CBBCA /* Pods-UITextFloating_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UITextFloating_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		265651F5BEAC6E166881ECBE3E66A8EF /* Pods-UITextFloating_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-UITextFloating_Example.modulemap"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		35EA8BD7748E98CF86CE9AD59B41C6ED /* UITextFloating.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UITextFloating.xcconfig; sourceTree = "<group>"; };
-		3617B69BEDE9F4302322D16F678E763E /* Pods_UITextFloating_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_UITextFloating_Tests.framework; path = "Pods-UITextFloating_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3617B69BEDE9F4302322D16F678E763E /* Pods_UITextFloating_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UITextFloating_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A090E28B0C58E5A2E6B1E93827E8BF3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5061D9ED8ED0C8C59B50FCFE5BDBA732 /* Pods-UITextFloating_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UITextFloating_Example.release.xcconfig"; sourceTree = "<group>"; };
-		508976616045D394DFE5D09FE04A0B4A /* UITextFloating-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextFloating-umbrella.h"; sourceTree = "<group>"; };
-		509BA948217A6D25A243383DFB0C32A7 /* UITextFloating.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = UITextFloating.framework; path = UITextFloating.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		509BA948217A6D25A243383DFB0C32A7 /* UITextFloating.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UITextFloating.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54E635D7BA07EAA894A440542E6567DD /* UITextFloat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITextFloat.swift; path = UITextFloating/Classes/UITextFloat.swift; sourceTree = "<group>"; };
+		55F273A540479D40F3FB88FAC9F4BAE1 /* UITextFloating.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = UITextFloating.modulemap; sourceTree = "<group>"; };
 		6155847B15B8216A515510681BA5E6AD /* Pods-UITextFloating_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UITextFloating_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		681116CC797C201D5F3CE2476ECD5E10 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = UITextFloating/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
-		79A411D8CD09171BC79D05090757EBBF /* Pods_UITextFloating_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_UITextFloating_Example.framework; path = "Pods-UITextFloating_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		92D8BFFBF28599DE49438E36B1693F90 /* UITextFloating-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITextFloating-dummy.m"; sourceTree = "<group>"; };
-		935B8664E8E2840985A803AF790FE9CE /* UITextFloating.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = UITextFloating.modulemap; sourceTree = "<group>"; };
+		79A411D8CD09171BC79D05090757EBBF /* Pods_UITextFloating_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UITextFloating_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F97A478CC78D08B6302118FA204747E /* UITextFloating-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextFloating-umbrella.h"; sourceTree = "<group>"; };
+		846DAB54A3CF00748651D02023D78062 /* UITextFloating-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UITextFloating-Info.plist"; sourceTree = "<group>"; };
+		8809BC98BF5DE6E49429179C973BD0BE /* UITextFloatAppearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITextFloatAppearance.swift; path = UITextFloating/Classes/UITextFloatAppearance.swift; sourceTree = "<group>"; };
 		948C9D95798F9F0DE2CF5AEDD7D4B3F2 /* Pods-UITextFloating_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UITextFloating_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		95D48599A77229A6400CBDCCB06BE000 /* UITextFloating-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextFloating-prefix.pch"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9562FBCD5BEABA39202A25D7CE2FB8E3 /* UITextFloating-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITextFloating-dummy.m"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E3C44AB418C3089C6345F11AF8CB9CA /* Pods-UITextFloating_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UITextFloating_Tests-Info.plist"; sourceTree = "<group>"; };
 		AB5FCACB46CA5130C99DA32239132738 /* Pods-UITextFloating_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UITextFloating_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		B1A8F07CC0BD134B133656856E76F89F /* Pods-UITextFloating_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UITextFloating_Example-frameworks.sh"; sourceTree = "<group>"; };
-		BA93340B0039F470040AB0404EDD7F33 /* UITextFloating-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UITextFloating-Info.plist"; sourceTree = "<group>"; };
+		BCFC210C2EAC5450833E114B46500A74 /* UITextFloating.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = UITextFloating.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C809C64991D5383C4ABF26FD817CEBCD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		CCC00717DD661566C365BF60E5B592C9 /* Pods-UITextFloating_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UITextFloating_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		D85981D97BE5AB727BBEEBCD29C2B0FF /* Pods-UITextFloating_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UITextFloating_Tests-umbrella.h"; sourceTree = "<group>"; };
 		EB3D09865E7C200D155AA71FCED9E6DC /* Pods-UITextFloating_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UITextFloating_Example-dummy.m"; sourceTree = "<group>"; };
-		EF61EA532352FDC122201FF5D2C8991E /* UITextFloating.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = UITextFloating.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		F16D716009E12405AEF56E9C29D953AC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		F5BF0993FD0425427537596734802513 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		EEFE98B17B9BC0268D309B7C6469E740 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = UITextFloating/Assets/Images.xcassets; sourceTree = "<group>"; };
+		FA77E11A1FBE19969709E3144F802630 /* UITextFloating.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UITextFloating.xcconfig; sourceTree = "<group>"; };
 		FE56426746B6D8C967C23BD11D31AA67 /* Pods-UITextFloating_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UITextFloating_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		00AA1C30717700A0733C79E064E09646 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F22578EC92A1BA932337BBFB6DAEBD37 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1C65989DE52C63A81EB040C0136725E8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E310E330F5D4EB1F8EA366C92C8F58B9 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3B1B4CA9F43328729024AEB196DCBD4B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				572674500DBD147780064584F0521513 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,18 +103,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1239573898124C4C5A7BB8D363941725 /* Support Files */ = {
+		16A6295EA14925C8D8304AEB1C851233 /* UITextFloating */ = {
 			isa = PBXGroup;
 			children = (
-				935B8664E8E2840985A803AF790FE9CE /* UITextFloating.modulemap */,
-				35EA8BD7748E98CF86CE9AD59B41C6ED /* UITextFloating.xcconfig */,
-				92D8BFFBF28599DE49438E36B1693F90 /* UITextFloating-dummy.m */,
-				BA93340B0039F470040AB0404EDD7F33 /* UITextFloating-Info.plist */,
-				95D48599A77229A6400CBDCCB06BE000 /* UITextFloating-prefix.pch */,
-				508976616045D394DFE5D09FE04A0B4A /* UITextFloating-umbrella.h */,
+				54E635D7BA07EAA894A440542E6567DD /* UITextFloat.swift */,
+				8809BC98BF5DE6E49429179C973BD0BE /* UITextFloatAppearance.swift */,
+				FFBA56A91334600C8A66B9EFD4AD4D88 /* Pod */,
+				E428ADC89EF6FA53D64146D077BB1A29 /* Resources */,
+				2F23B4E75006B3E3445E9ED198AA5812 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/UITextFloating";
+			name = UITextFloating;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		1E010065B50899F87317995B69746A11 /* Pods-UITextFloating_Example */ = {
@@ -140,10 +143,24 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		318F8E3196917311B718011280FA14CA /* Development Pods */ = {
+		2F23B4E75006B3E3445E9ED198AA5812 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				893CF9FA8D9D3C04B2594FE49617C69A /* UITextFloating */,
+				55F273A540479D40F3FB88FAC9F4BAE1 /* UITextFloating.modulemap */,
+				FA77E11A1FBE19969709E3144F802630 /* UITextFloating.xcconfig */,
+				9562FBCD5BEABA39202A25D7CE2FB8E3 /* UITextFloating-dummy.m */,
+				846DAB54A3CF00748651D02023D78062 /* UITextFloating-Info.plist */,
+				16E1F223E5CE08484B51D737CCB65C6E /* UITextFloating-prefix.pch */,
+				7F97A478CC78D08B6302118FA204747E /* UITextFloating-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/UITextFloating";
+			sourceTree = "<group>";
+		};
+		5C1D4FCCEC0837DA8EB666D7ED637973 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				16A6295EA14925C8D8304AEB1C851233 /* UITextFloating */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -155,27 +172,6 @@
 				D039637EEA67B740D76690BF1712F55B /* Pods-UITextFloating_Tests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		893CF9FA8D9D3C04B2594FE49617C69A /* UITextFloating */ = {
-			isa = PBXGroup;
-			children = (
-				681116CC797C201D5F3CE2476ECD5E10 /* ReplaceMe.swift */,
-				B9C1C4F211AD07979C02392D917488C1 /* Pod */,
-				1239573898124C4C5A7BB8D363941725 /* Support Files */,
-			);
-			name = UITextFloating;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		B9C1C4F211AD07979C02392D917488C1 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				F5BF0993FD0425427537596734802513 /* LICENSE */,
-				F16D716009E12405AEF56E9C29D953AC /* README.md */,
-				EF61EA532352FDC122201FF5D2C8991E /* UITextFloating.podspec */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -190,7 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				318F8E3196917311B718011280FA14CA /* Development Pods */,
+				5C1D4FCCEC0837DA8EB666D7ED637973 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				250E78590C98951F9D6557662B1BF15D /* Products */,
 				76787718A5564D8A0076131BB1C4608D /* Targets Support Files */,
@@ -221,22 +217,40 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E428ADC89EF6FA53D64146D077BB1A29 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EEFE98B17B9BC0268D309B7C6469E740 /* Images.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		FFBA56A91334600C8A66B9EFD4AD4D88 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				C809C64991D5383C4ABF26FD817CEBCD /* LICENSE */,
+				3A090E28B0C58E5A2E6B1E93827E8BF3 /* README.md */,
+				BCFC210C2EAC5450833E114B46500A74 /* UITextFloating.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		4DDC6DD7964BC57DB310ADDE303DDAF8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				667FED8E479403E759694C66E0E814AD /* UITextFloating-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		72C12EB68746BF6EBD865F9E356AA2EB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3B82B50DDF038BEF498CF4AE9315292E /* Pods-UITextFloating_Example-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		927EB832619EBE94743A5364341C6CCF /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2C719374294198F47D0EB9D2E4D23E8B /* UITextFloating-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,12 +267,12 @@
 /* Begin PBXNativeTarget section */
 		998C6F004DC1E2B7F119F86B9C476B7C /* UITextFloating */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3F7FB50CB2D768A6D2F922D015544E81 /* Build configuration list for PBXNativeTarget "UITextFloating" */;
+			buildConfigurationList = 8B665753BDBCE7604F2B0D59E8C3BBE7 /* Build configuration list for PBXNativeTarget "UITextFloating" */;
 			buildPhases = (
-				927EB832619EBE94743A5364341C6CCF /* Headers */,
-				B453CFE46C05C28D02BE995A0F19FF7B /* Sources */,
-				3B1B4CA9F43328729024AEB196DCBD4B /* Frameworks */,
-				12B460FB254C7536BDAA62769BB9E6B7 /* Resources */,
+				4DDC6DD7964BC57DB310ADDE303DDAF8 /* Headers */,
+				7C5BCA9CFC90D5487F9A6B0F48905AB9 /* Sources */,
+				00AA1C30717700A0733C79E064E09646 /* Frameworks */,
+				E6A8F042B93A163978F7ADEA171137BD /* Resources */,
 			);
 			buildRules = (
 			);
@@ -322,6 +336,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = 250E78590C98951F9D6557662B1BF15D /* Products */;
@@ -336,17 +351,18 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		12B460FB254C7536BDAA62769BB9E6B7 /* Resources */ = {
+		386C8DCF7F0FD087C22CA0EBDD8670DA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		386C8DCF7F0FD087C22CA0EBDD8670DA /* Resources */ = {
+		E6A8F042B93A163978F7ADEA171137BD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34C5F92AE96F3F8E509BF6F21353F75D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,20 +376,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7C5BCA9CFC90D5487F9A6B0F48905AB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FC7A462172D6BEB6C5DEE28201171C1 /* UITextFloat.swift in Sources */,
+				C4F5C7D8DB38582688BD3A17FFB99AB4 /* UITextFloatAppearance.swift in Sources */,
+				F4698C96C2C902FDC102FA10132DD64C /* UITextFloating-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B43DAE04AD98C0D74E72946461A07D8A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				843F2C9E2B52B9FB64A0C06407B698DB /* Pods-UITextFloating_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B453CFE46C05C28D02BE995A0F19FF7B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A6FC7152DFD0470103B62F5307CB7955 /* ReplaceMe.swift in Sources */,
-				ADC4CF54B7485AD5129132F8A6A3EB47 /* UITextFloating-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,9 +454,9 @@
 			};
 			name = Release;
 		};
-		1644634F71AC8C226C9D2A3403EE1242 /* Debug */ = {
+		4596F48ED1668079FEB51EA62A75A1E0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 35EA8BD7748E98CF86CE9AD59B41C6ED /* UITextFloating.xcconfig */;
+			baseConfigurationReference = FA77E11A1FBE19969709E3144F802630 /* UITextFloating.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -453,7 +470,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/UITextFloating/UITextFloating-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/UITextFloating/UITextFloating-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/UITextFloating/UITextFloating.modulemap";
 				PRODUCT_MODULE_NAME = UITextFloating;
@@ -461,38 +478,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		18E07BF78602ED2C3C3A0C397E06AD50 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 35EA8BD7748E98CF86CE9AD59B41C6ED /* UITextFloating.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/UITextFloating/UITextFloating-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/UITextFloating/UITextFloating-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/UITextFloating/UITextFloating.modulemap";
-				PRODUCT_MODULE_NAME = UITextFloating;
-				PRODUCT_NAME = UITextFloating;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -600,6 +586,37 @@
 			};
 			name = Debug;
 		};
+		A63FA14504C2A5C4F8A8BE5A2654EF52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA77E11A1FBE19969709E3144F802630 /* UITextFloating.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/UITextFloating/UITextFloating-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UITextFloating/UITextFloating-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UITextFloating/UITextFloating.modulemap";
+				PRODUCT_MODULE_NAME = UITextFloating;
+				PRODUCT_NAME = UITextFloating;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		B0087CB4594321EF41619F3181FE120E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -653,8 +670,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -736,15 +752,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3F7FB50CB2D768A6D2F922D015544E81 /* Build configuration list for PBXNativeTarget "UITextFloating" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1644634F71AC8C226C9D2A3403EE1242 /* Debug */,
-				18E07BF78602ED2C3C3A0C397E06AD50 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -759,6 +766,15 @@
 			buildConfigurations = (
 				65A9985647A7BC55BEF4F9994F20F185 /* Debug */,
 				10BEBD06A75F4FB82C6E1588FF92918B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B665753BDBCE7604F2B0D59E8C3BBE7 /* Build configuration list for PBXNativeTarget "UITextFloating" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A63FA14504C2A5C4F8A8BE5A2654EF52 /* Debug */,
+				4596F48ED1668079FEB51EA62A75A1E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

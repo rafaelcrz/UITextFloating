@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
-		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		CA17E8252AB5935516C16E58 /* Pods_UITextFloating_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B99D2BE2F0B5E4F4A0BABC27 /* Pods_UITextFloating_Example.framework */; };
-		FE56EC49E19BE6E4AC5547FB /* Pods_UITextFloating_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FE9F7FF4F8C2382E0D5EEDD /* Pods_UITextFloating_Tests.framework */; };
+		79460DB094C8AF977AA3C5DD /* Pods_UITextFloating_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F78F7A289C4ED672231DC3 /* Pods_UITextFloating_Example.framework */; };
+		92FD2E9223525F8500CFD0AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FD2E9023525F8500CFD0AD /* ViewController.swift */; };
+		92FD2E9323525F8500CFD0AD /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92FD2E9123525F8500CFD0AD /* ViewController.xib */; };
+		F9E3C69201768D912813357C /* Pods_UITextFloating_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E087AE4E9EDF46577EECE6 /* Pods_UITextFloating_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,25 +28,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1FE9F7FF4F8C2382E0D5EEDD /* Pods_UITextFloating_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UITextFloating_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		205F16AC2A774693C35F683A /* Pods-UITextFloating_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITextFloating_Example.release.xcconfig"; path = "Target Support Files/Pods-UITextFloating_Example/Pods-UITextFloating_Example.release.xcconfig"; sourceTree = "<group>"; };
-		43E3ACB0738712AF520C4BE6 /* Pods-UITextFloating_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITextFloating_Tests.release.xcconfig"; path = "Target Support Files/Pods-UITextFloating_Tests/Pods-UITextFloating_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* UITextFloating_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITextFloating_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* UITextFloating_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITextFloating_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		6DB4938A64CFF9419B6BA008 /* UITextFloating.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = UITextFloating.podspec; path = ../UITextFloating.podspec; sourceTree = "<group>"; };
-		70A1861DC6CE0230AA45D2AC /* Pods-UITextFloating_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITextFloating_Example.debug.xcconfig"; path = "Target Support Files/Pods-UITextFloating_Example/Pods-UITextFloating_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		7C92D394EC7302EF176B6C3D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		97F4721C2084C2EAD0D4E429 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		B90D4740084F215A8031C5F6 /* Pods-UITextFloating_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITextFloating_Tests.debug.xcconfig"; path = "Target Support Files/Pods-UITextFloating_Tests/Pods-UITextFloating_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		B99D2BE2F0B5E4F4A0BABC27 /* Pods_UITextFloating_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UITextFloating_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DB4938A64CFF9419B6BA008 /* UITextFloating.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = UITextFloating.podspec; path = ../UITextFloating.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		70F78F7A289C4ED672231DC3 /* Pods_UITextFloating_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UITextFloating_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C92D394EC7302EF176B6C3D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		92FD2E9023525F8500CFD0AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		92FD2E9123525F8500CFD0AD /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		97F4721C2084C2EAD0D4E429 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		A95467A99E92C5A3843448C6 /* Pods-UITextFloating_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITextFloating_Tests.release.xcconfig"; path = "Target Support Files/Pods-UITextFloating_Tests/Pods-UITextFloating_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		BBE59A9507EF75BA69C21092 /* Pods-UITextFloating_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITextFloating_Example.debug.xcconfig"; path = "Target Support Files/Pods-UITextFloating_Example/Pods-UITextFloating_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		BC791B903C10913DE49D1224 /* Pods-UITextFloating_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITextFloating_Tests.debug.xcconfig"; path = "Target Support Files/Pods-UITextFloating_Tests/Pods-UITextFloating_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		D1E087AE4E9EDF46577EECE6 /* Pods_UITextFloating_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UITextFloating_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DECC13F2F94EFB438DB544F8 /* Pods-UITextFloating_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITextFloating_Example.release.xcconfig"; path = "Target Support Files/Pods-UITextFloating_Example/Pods-UITextFloating_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA17E8252AB5935516C16E58 /* Pods_UITextFloating_Example.framework in Frameworks */,
+				79460DB094C8AF977AA3C5DD /* Pods_UITextFloating_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,22 +62,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE56EC49E19BE6E4AC5547FB /* Pods_UITextFloating_Tests.framework in Frameworks */,
+				F9E3C69201768D912813357C /* Pods_UITextFloating_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5B962FF86B39C4FA95CAC465 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B99D2BE2F0B5E4F4A0BABC27 /* Pods_UITextFloating_Example.framework */,
-				1FE9F7FF4F8C2382E0D5EEDD /* Pods_UITextFloating_Tests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -86,7 +77,7 @@
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				752B184CEA3A87F8668A4F02 /* Pods */,
-				5B962FF86B39C4FA95CAC465 /* Frameworks */,
+				BF3EC0895D765548602AAAE0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,11 +94,11 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				92FD2E9023525F8500CFD0AD /* ViewController.swift */,
+				92FD2E9123525F8500CFD0AD /* ViewController.xib */,
 			);
 			name = "Example for UITextFloating";
 			path = UITextFloating;
@@ -151,13 +142,21 @@
 		752B184CEA3A87F8668A4F02 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				70A1861DC6CE0230AA45D2AC /* Pods-UITextFloating_Example.debug.xcconfig */,
-				205F16AC2A774693C35F683A /* Pods-UITextFloating_Example.release.xcconfig */,
-				B90D4740084F215A8031C5F6 /* Pods-UITextFloating_Tests.debug.xcconfig */,
-				43E3ACB0738712AF520C4BE6 /* Pods-UITextFloating_Tests.release.xcconfig */,
+				BBE59A9507EF75BA69C21092 /* Pods-UITextFloating_Example.debug.xcconfig */,
+				DECC13F2F94EFB438DB544F8 /* Pods-UITextFloating_Example.release.xcconfig */,
+				BC791B903C10913DE49D1224 /* Pods-UITextFloating_Tests.debug.xcconfig */,
+				A95467A99E92C5A3843448C6 /* Pods-UITextFloating_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		BF3EC0895D765548602AAAE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				70F78F7A289C4ED672231DC3 /* Pods_UITextFloating_Example.framework */,
+				D1E087AE4E9EDF46577EECE6 /* Pods_UITextFloating_Tests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,11 +166,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "UITextFloating_Example" */;
 			buildPhases = (
-				D824F9087D822EB9BA91AEDA /* [CP] Check Pods Manifest.lock */,
+				AA098F3D8936C0522F02C88C /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				ACAF0C155ECFDE9511CA834B /* [CP] Embed Pods Frameworks */,
+				8DE73F8E4E615AAC4F6F790F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -186,7 +185,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "UITextFloating_Tests" */;
 			buildPhases = (
-				044C54FC67C692A7893BF956 /* [CP] Check Pods Manifest.lock */,
+				5D4DB63BE2120508384D1509 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
@@ -208,15 +207,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = BLPC49LKL4;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = BLPC49LKL4;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -227,6 +228,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -246,8 +248,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				92FD2E9323525F8500CFD0AD /* ViewController.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,7 +264,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		044C54FC67C692A7893BF956 /* [CP] Check Pods Manifest.lock */ = {
+		5D4DB63BE2120508384D1509 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -284,7 +286,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		ACAF0C155ECFDE9511CA834B /* [CP] Embed Pods Frameworks */ = {
+		8DE73F8E4E615AAC4F6F790F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -302,7 +304,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UITextFloating_Example/Pods-UITextFloating_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D824F9087D822EB9BA91AEDA /* [CP] Check Pods Manifest.lock */ = {
+		AA098F3D8936C0522F02C88C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -331,7 +333,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				92FD2E9223525F8500CFD0AD /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,14 +357,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				607FACDA1AFB9204008FA782 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		607FACDE1AFB9204008FA782 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -378,6 +372,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -386,12 +381,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -431,6 +428,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -439,12 +437,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -475,38 +475,41 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 70A1861DC6CE0230AA45D2AC /* Pods-UITextFloating_Example.debug.xcconfig */;
+			baseConfigurationReference = BBE59A9507EF75BA69C21092 /* Pods-UITextFloating_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BLPC49LKL4;
 				INFOPLIST_FILE = UITextFloating/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 205F16AC2A774693C35F683A /* Pods-UITextFloating_Example.release.xcconfig */;
+			baseConfigurationReference = DECC13F2F94EFB438DB544F8 /* Pods-UITextFloating_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BLPC49LKL4;
 				INFOPLIST_FILE = UITextFloating/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B90D4740084F215A8031C5F6 /* Pods-UITextFloating_Tests.debug.xcconfig */;
+			baseConfigurationReference = BC791B903C10913DE49D1224 /* Pods-UITextFloating_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = BLPC49LKL4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -520,15 +523,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UITextFloating_Example.app/UITextFloating_Example";
 			};
 			name = Debug;
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 43E3ACB0738712AF520C4BE6 /* Pods-UITextFloating_Tests.release.xcconfig */;
+			baseConfigurationReference = A95467A99E92C5A3843448C6 /* Pods-UITextFloating_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = BLPC49LKL4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -538,7 +542,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UITextFloating_Example.app/UITextFloating_Example";
 			};
 			name = Release;
