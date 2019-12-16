@@ -11,7 +11,9 @@ import UITextFloating
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var uiFloatTextA: UITextFloat!
+    @IBOutlet weak var stackView: UIStackView!
+    let inputs: [String] = ["First Name", "Las Name", "E-mail", "Age", "Password"]
+    
     
     init() {
         super.init(nibName: "ViewController", bundle: Bundle(for: type(of: self)))
@@ -20,24 +22,31 @@ class ViewController: UIViewController {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let appearance = UITextFloatAppearance.shared
-            .setTextColor(.red)
-            .setLineTypingColor(.green)
         
-        self.uiFloatTextA.setup(appearance: appearance)
+        for input in inputs {
+            let textField = UITextFloat(frame: CGRect(x: 0, y: 0, width: stackView.frame.width, height: 60))
+            textField.floatLabel = input
+            //                textField.errorLabel = input
+            stackView.addArrangedSubview(textField)
+        }
         
-        self.uiFloatTextA.text = "teste"
-        self.uiFloatTextA.floatLabel = "FLOAT"
-        
+        //
+        //        let appearance = UITextFloatAppearance.shared
+        //            .setTextColor(.red)
+        //            .setLineTypingColor(.green)
+        //
+        //        float1.setup(appearance: appearance)
+        //
+        //        uiFloatTextA.addSubview(float1)
         
     }
-
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
+        //        view.endEditing(true)
     }
-
+    
 }
