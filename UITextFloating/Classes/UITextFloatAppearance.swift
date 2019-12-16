@@ -11,18 +11,12 @@ public class UITextFloatAppearance {
     
     public static var shared = UITextFloatAppearance()
     
-    var textColor: UIColor?
-    var lineTypingColor: UIColor = .lightGray
+    public var textColor: UIColor?
+    public var lineTypingColor: UIColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
+    public var lineErrorColor: UIColor = .red
+    public var lineDefaultColor: UIColor = .lightGray
+    public var placeHolderColor: UIColor = .lightGray
+    public var titleColor: UIColor = .lightGray
     
     init() {}
-    
-    public func setTextColor(_ color: UIColor) -> UITextFloatAppearance {
-        self.textColor = color
-        return self
-    }
-    
-    public func setLineTypingColor(_ color: UIColor) -> UITextFloatAppearance {
-        self.lineTypingColor = color
-        return self
-    }
 }

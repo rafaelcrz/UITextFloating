@@ -11,7 +11,9 @@ import UITextFloating
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var uiFloatTextA: UITextFloat!
+    @IBOutlet weak var stackView: UIStackView!
+    let inputs: [String] = ["First Name", "Las Name", "E-mail", "Age", "Password"]
+    
     
     init() {
         super.init(nibName: "ViewController", bundle: Bundle(for: type(of: self)))
@@ -20,24 +22,27 @@ class ViewController: UIViewController {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let appearance = UITextFloatAppearance.shared
-            .setTextColor(.red)
-            .setLineTypingColor(.green)
         
-        self.uiFloatTextA.setup(appearance: appearance)
+        UITextFloatAppearance.shared.lineDefaultColor = .green
+        UITextFloatAppearance.shared.lineTypingColor = .red
+        UITextFloatAppearance.shared.lineErrorColor = .purple
+        UITextFloatAppearance.shared.titleColor = .black
         
-        self.uiFloatTextA.text = "teste"
-        self.uiFloatTextA.floatLabel = "FLOAT"
-        
+        let fieldName = UITextFloat(frame: CGRect(x: 0, y: 0, width: stackView.frame.width, height: 60))
+        fieldName.floatLabel = "Full name"
+        fieldName.secureTextEntry = true
+        let fieldEmail = UITextFloat(frame: CGRect(x: 0, y: 0, width: stackView.frame.width, height: 60))
+        fieldEmail.floatLabel = "E-mail"
+        fieldEmail.errorLabel = "Parece que esse e-mail não é valido"
+        let fieldAge = UITextFloat(frame: CGRect(x: 0, y: 0, width: stackView.frame.width, height: 60))
+        fieldAge.floatLabel = "Age"
+        stackView.addArrangedSubview(fieldName)
+        stackView.addArrangedSubview(fieldEmail)
+        stackView.addArrangedSubview(fieldAge)
         
     }
-
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
-    }
-
 }

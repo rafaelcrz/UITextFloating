@@ -15,179 +15,144 @@ protocol UITextFloatDelegate {
 }
 
 public class UITextFloat: UIView {
-    
+    private let animateDuration = 0.3
+    private let textFieldHeight: CGFloat = 31
+    lazy var contentView: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .vertical
+        stack.distribution = .fill
+        stack.alignment = .fill
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        return stack
+    }()
+    lazy var lineView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UITextFloatAppearance.shared.lineDefaultColor
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    lazy var uiLabelFlow: UILabel = {
+        let label = UILabel()
+        label.textColor = UITextFloatAppearance.shared.placeHolderColor
+        label.font = label.font.withSize(16)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    lazy var uiLabelError: UILabel = {
+        let label = UILabel()
+        label.textColor = .red
+        label.font = label.font.withSize(13)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    public lazy var uiTextFieldValue: UITextField = {
+        let textField = UITextField()
+        textField.placeholder = ""
+        textField.addTarget(self, action: #selector(uiTextFieldEndingEdit(_:)), for: .editingDidEnd)
+        textField.addTarget(self, action: #selector(EditingChanged(_:)), for: .editingChanged)
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        
+        textField.rightViewMode = .always
+        let buttonClose = UIButton(frame: CGRect(origin: .zero, size: CGSize(width: 10, height: 10)))
+        buttonClose.alpha = 0
+        buttonClose.setImage(UIImage(named: "clear", in: Bundle(for: type(of: self)), compatibleWith: nil), for: .normal)
+        buttonClose.addTarget(self, action: #selector(self.clearText), for: .touchUpInside)
+        textField.rightView = buttonClose
+        return textField
+    }()
+        
     var delegate: UITextFloatDelegate?
     
-    @IBOutlet weak var uiLabelErrorMessage: UILabel!
-    @IBOutlet weak var uiLabelFloat: UILabel!
-    @IBOutlet weak var uiViewLine: UIView!
-    @IBOutlet weak var uiViewState: UIView!
-    @IBOutlet weak var uiTextFieldValue: UITextField!
-    
-    private let nibName = String(describing: UITextFloat.self)
-    private var isValid: Bool = false
-    private var uiEditHeight: CGFloat = 0
-        
-    private var appearance: UITextFloatAppearance?
-    
-//    func text() -> String? {
-//        return self.uiTextFieldValue.text
-//    }
-    
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         self.initFromNib()
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        self.initFromNib()
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
-    open func setup(appearance: UITextFloatAppearance) {
-        self.appearance = appearance
-        self.uiTextFieldValue.textColor = appearance.textColor
-    }
-    
-    open var text: String? {
-        didSet {
-            self.uiTextFieldValue.text = self.text
-            if !(self.text?.isEmpty ?? true) {
-//                self.uiLabelFloat.transform = .init(translationX: .zero, y: -(uiEditHeight))
-            } else {
-//                self.uiLabelFloat.transform = .identity
-            }
-        }
-    }
-    
-//    @IBInspectable
-    open var floatLabel: String? = "" {
-        didSet {
-            self.uiLabelFloat.text = self.floatLabel
-        }
-    }
-    
-    @IBInspectable
-    var required: Bool = true
-    
-    @IBInspectable
-    var secureTextEntry: Bool = false {
+    public var secureTextEntry: Bool = false {
         didSet {
             self.uiTextFieldValue.isSecureTextEntry = self.secureTextEntry
         }
     }
     
-    @IBInspectable
-    var errorLabel: String = "" {
+    public var errorLabel: String? {
         didSet {
-            self.uiLabelErrorMessage.text = self.errorLabel
-            if !self.errorLabel.isEmpty {
-                self.errorState()
+            self.uiLabelError.text = self.errorLabel
+            if !(self.errorLabel?.isEmpty ?? true) {
+                self.lineView.backgroundColor = UITextFloatAppearance.shared.lineErrorColor
             } else {
-                self.clearState()
+                self.lineView.backgroundColor = UITextFloatAppearance.shared.lineDefaultColor
             }
-            
         }
     }
-    
-    public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        
-//        self.uiTextFieldValue.becomeFirstResponder()
+    public var floatLabel: String? {
+        didSet {
+            self.uiLabelFlow.text = self.floatLabel
+        }
     }
-    
     func initFromNib() {
-        guard let viewNib = Bundle(for: type(of: self)).loadNibNamed(self.nibName, owner: self, options: [:])?.first as? UIView else {
-            return
-        }
+        clipsToBounds = true
+        contentView.frame = self.bounds
+        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        self.addSubview(contentView)
+        NSLayoutConstraint.activate([
+            uiTextFieldValue.heightAnchor.constraint(equalToConstant: self.textFieldHeight),
+            uiTextFieldValue.widthAnchor.constraint(equalToConstant: frame.width)
+        ])
+        NSLayoutConstraint.activate([
+            lineView.heightAnchor.constraint(equalToConstant: 1),
+            lineView.widthAnchor.constraint(equalToConstant: frame.width)
+        ])
+        contentView.addArrangedSubview(uiLabelFlow)
+        contentView.addArrangedSubview(uiTextFieldValue)
+        contentView.addArrangedSubview(lineView)
+        contentView.addArrangedSubview(uiLabelError)
         
-        //viewNib.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        viewNib.frame = self.bounds
-        addSubview(viewNib)
-        
-        viewNib.translatesAutoresizingMaskIntoConstraints = false
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[childView]|",
-                                                      options: [],
-                                                      metrics: nil,
-                                                      views: ["childView": viewNib]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[childView]|",
-                                                      options: [],
-                                                      metrics: nil,
-                                                      views: ["childView": viewNib]))
-        
-        
-        self.addObservers()
-        self.uiViewState.backgroundColor = .clear
-        self.uiViewState.clipsToBounds = true
-        self.uiTextFieldValue.addTarget(self, action: #selector(uiTextFieldChanging(_:)), for: .editingChanged)
-        self.uiTextFieldValue.addTarget(self, action: #selector(uiTextFieldEndingEdit(_:)), for: .editingDidEnd)
-        self.uiLabelErrorMessage.alpha = 0
-        self.uiEditHeight = self.uiTextFieldValue.frame.height
-        
-        
-        
-       
+        self.downLabelFloating()
     }
-    
     @objc
-    func willKeyBoardShow(notification: Notification) {
-//        self.uiLabelFloat.transform = .init(translationX: .zero, y: -(uiEditHeight))
-    }
-    
-    @objc
-    func willKeyBoardHide() {
-        let textValue: String = self.uiTextFieldValue.text ?? ""
-        
-        if textValue.isEmpty {
-//            self.uiLabelFloat.transform = .identity
+    func EditingChanged(_ textField: UITextField) {
+        UIView.animate(withDuration: self.animateDuration) {
+            if self.errorLabel?.isEmpty ?? true {
+                self.lineView.backgroundColor = UITextFloatAppearance.shared.lineTypingColor
+            }
+            if textField.text?.isEmpty ?? true {
+                self.downLabelFloating()
+            } else {
+                self.upLabelFloating()
+            }
         }
     }
-    
-    @objc
-    func uiTextFieldChanging(_ textField: UITextField) {
-        self.delegate?.uiTextFieldChanging(self, textField)
-//        self.uiViewLine.backgroundColor = UIColor(named: "AppBlueMain")
-    }
-    
     @objc
     func uiTextFieldEndingEdit(_ textField: UITextField) {
-        UIView.animate(withDuration: 0.5) {
-            self.uiViewLine.backgroundColor = .lightGray
+        UIView.animate(withDuration: self.animateDuration) {
+            if self.errorLabel?.isEmpty ?? true {
+                self.lineView.backgroundColor = UITextFloatAppearance.shared.lineDefaultColor
+            }
         }
-        
-        //        guard let text = textField.text else {
-        //            return
-        //        }
-        //
-        //        if self.required && text.isEmpty {
-        //            self.delegate?.inputValidation(self, isValid: false)
-        //        } else {
-        //            //            self.successState()
-        //            self.delegate?.inputValidation(self, isValid: true)
-        //        }
+    }
+    fileprivate func downLabelFloating() {
+        self.uiTextFieldValue.rightView?.alpha = 0
+        self.uiLabelFlow.textColor = UITextFloatAppearance.shared.placeHolderColor
+        self.uiLabelFlow.transform = .init(translationX: .zero, y: 8 + (self.uiLabelFlow.font.lineHeight))
+    }
+    fileprivate func upLabelFloating() {
+        self.uiTextFieldValue.rightView?.alpha = 1
+        self.uiLabelFlow.textColor = UITextFloatAppearance.shared.titleColor
+        self.uiLabelFlow.transform = .identity
     }
     
-    func errorState(){
-        self.uiLabelErrorMessage.alpha = 1
-        self.uiViewLine.backgroundColor = .red
-        self.uiViewState.alpha = 1
+    @objc
+    func clearText() {
+        self.uiTextFieldValue.text = nil
+        UIView.animate(withDuration: self.animateDuration) {
+            self.downLabelFloating()
+        }
     }
-    func successState() {
+    override open var intrinsicContentSize: CGSize {
+        return CGSize(width: bounds.size.width, height: bounds.size.height + 10)
     }
-    func clearState() {
-        self.uiLabelErrorMessage.alpha = 0
-        self.uiViewState.alpha = 0
-    }
-    
-    func addObservers() {
-        NotificationCenter.default.addObserver(self, selector: #selector(willKeyBoardShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(willKeyBoardHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
-    
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
-    
 }
-
-
