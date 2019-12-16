@@ -27,13 +27,13 @@ public class UITextFloat: UIView {
     }()
     lazy var lineView: UIView = {
         let view = UIView()
-        view.backgroundColor = .lightGray
+        view.backgroundColor = UITextFloatAppearance.shared.lineDefaultColor
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     lazy var uiLabelFlow: UILabel = {
         let label = UILabel()
-        label.textColor = .lightGray
+        label.textColor = UITextFloatAppearance.shared.placeHolderColor
         label.font = label.font.withSize(16)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -41,7 +41,7 @@ public class UITextFloat: UIView {
     lazy var uiLabelError: UILabel = {
         let label = UILabel()
         label.textColor = .red
-        label.font = label.font.withSize(12)
+        label.font = label.font.withSize(13)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -80,38 +80,23 @@ public class UITextFloat: UIView {
         //        self.uiTextFieldValue.textColor = appearance.textColor
     }
     
-    //    open var text: String? {
-    //        didSet {
-    //            self.uiTextFieldValue.text = self.text
-    //            if !(self.text?.isEmpty ?? true) {
-    ////                self.uiLabelFloat.transform = .init(translationX: .zero, y: -(uiEditHeight))
-    //            } else {
-    ////                self.uiLabelFloat.transform = .identity
-    //            }
-    //        }
-    //    }
+    public var secureTextEntry: Bool = false {
+        didSet {
+            self.uiTextFieldValue.isSecureTextEntry = self.secureTextEntry
+        }
+    }
     
-    //    @IBInspectable
-    //    var required: Bool = true
-    
-    //    @IBInspectable
-    //    var secureTextEntry: Bool = false {
-    //        didSet {
-    //            self.uiTextFieldValue.isSecureTextEntry = self.secureTextEntry
-    //        }
-    //    }
-    
-    public var errorLabel: String? = "" {
+    public var errorLabel: String? {
         didSet {
             self.uiLabelError.text = self.errorLabel
-            if self.errorLabel != nil {
-                self.lineView.backgroundColor = .red
+            if !(self.errorLabel?.isEmpty ?? true) {
+                self.lineView.backgroundColor = UITextFloatAppearance.shared.lineErrorColor
             } else {
-                self.lineView.backgroundColor = .lightGray
+                self.lineView.backgroundColor = UITextFloatAppearance.shared.lineDefaultColor
             }
         }
     }
-    public var floatLabel: String? = "" {
+    public var floatLabel: String? {
         didSet {
             self.uiLabelFlow.text = self.floatLabel
         }
@@ -135,47 +120,43 @@ public class UITextFloat: UIView {
         contentView.addArrangedSubview(uiLabelError)
         
         self.downLabelFloating()
-        
-        
-        
-        //        self.uiViewState.backgroundColor = .clear
-        //        self.uiViewState.clipsToBounds = true
-        
-        //        self.uiLabelErrorMessage.alpha = 0
-        //        self.uiEditHeight = self.uiTextFieldValue.frame.height
-        
-        
-        
-        
     }
     @objc
     func EditingChanged(_ textField: UITextField) {
         UIView.animate(withDuration: self.animateDuration) {
-            self.lineView.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
+            if self.errorLabel?.isEmpty ?? true {
+                self.lineView.backgroundColor = UITextFloatAppearance.shared.lineTypingColor
+            }
             if textField.text?.isEmpty ?? true {
-                self.uiTextFieldValue.rightView?.alpha = 0
                 self.downLabelFloating()
             } else {
-                self.uiTextFieldValue.rightView?.alpha = 1
-                self.uiLabelFlow.transform = .identity
+                self.upLabelFloating()
             }
         }
     }
     @objc
     func uiTextFieldEndingEdit(_ textField: UITextField) {
         UIView.animate(withDuration: self.animateDuration) {
-            self.lineView.backgroundColor = .lightGray
+            if self.errorLabel?.isEmpty ?? true {
+                self.lineView.backgroundColor = UITextFloatAppearance.shared.lineDefaultColor
+            }
         }
     }
     fileprivate func downLabelFloating() {
+        self.uiTextFieldValue.rightView?.alpha = 0
+        self.uiLabelFlow.textColor = UITextFloatAppearance.shared.placeHolderColor
         self.uiLabelFlow.transform = .init(translationX: .zero, y: 8 + (self.uiLabelFlow.font.lineHeight))
+    }
+    fileprivate func upLabelFloating() {
+        self.uiTextFieldValue.rightView?.alpha = 1
+        self.uiLabelFlow.textColor = UITextFloatAppearance.shared.titleColor
+        self.uiLabelFlow.transform = .identity
     }
     
     @objc
     func clearText() {
         self.uiTextFieldValue.text = nil
         UIView.animate(withDuration: self.animateDuration) {
-            self.uiTextFieldValue.rightView?.alpha = 0
             self.downLabelFloating()
         }
     }
