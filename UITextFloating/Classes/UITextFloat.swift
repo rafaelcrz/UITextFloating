@@ -60,11 +60,8 @@ public class UITextFloat: UIView {
         textField.rightView = buttonClose
         return textField
     }()
-    
-    var actualText: UITextField?
-    
+        
     var delegate: UITextFloatDelegate?
-    private var appearance: UITextFloatAppearance?
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -73,11 +70,6 @@ public class UITextFloat: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    open func setup(appearance: UITextFloatAppearance) {
-        self.appearance = appearance
-        //        self.uiTextFieldValue.textColor = appearance.textColor
     }
     
     public var secureTextEntry: Bool = false {
