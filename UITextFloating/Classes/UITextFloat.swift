@@ -14,6 +14,7 @@ protocol UITextFloatDelegate {
     func uiTextFieldChanging(_ textFloat: UITextFloat, _ textField: UITextField)
 }
 
+@IBDesignable
 public class UITextFloat: UIView {
     private let animateDuration = 0.3
     private let textFieldHeight: CGFloat = 31
@@ -73,6 +74,15 @@ public class UITextFloat: UIView {
         self.initFromNib()
     }
     
+    public override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        self.initFromNib()
+        self.uiLabelError.text = "Error text"
+        self.uiLabelFlow.text = "Text floating"
+        self.uiTextFieldValue.text = "Text value"
+        self.upLabelFloating()
+    }
+    
     public var secureTextEntry: Bool = false {
         didSet {
             self.uiTextFieldValue.isSecureTextEntry = self.secureTextEntry
@@ -96,8 +106,6 @@ public class UITextFloat: UIView {
     }
     func initFromNib() {
         clipsToBounds = true
-        contentView.backgroundColor = .blue
-        backgroundColor = .yellow
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         self.addSubview(contentView)
