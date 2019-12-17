@@ -25,12 +25,22 @@
                         <constraint firstAttribute="height" priority="250" id="yfC-0g-wVc"/>
                     </constraints>
                 </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nx5-y1-sls" customClass="UITextFloat" customModule="UITextFloating">
+                    <rect key="frame" x="22" y="28" width="370" height="66"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="66" id="L7t-le-p5q"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
+                <constraint firstItem="Nx5-y1-sls" firstAttribute="top" secondItem="Pui-qo-AGi" secondAttribute="bottom" constant="8" symbolic="YES" id="46u-Fa-kHe"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Pui-qo-AGi" secondAttribute="trailing" constant="20" id="6zn-xZ-BfR"/>
+                <constraint firstItem="Nx5-y1-sls" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="22" id="N8s-YZ-BcK"/>
                 <constraint firstItem="Pui-qo-AGi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="OZQ-eL-8PW"/>
                 <constraint firstItem="Pui-qo-AGi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="RTH-NI-q4G"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Nx5-y1-sls" secondAttribute="trailing" constant="22" id="c3G-S3-6mX"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="113.31521739130436"/>
