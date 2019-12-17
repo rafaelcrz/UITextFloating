@@ -53,14 +53,14 @@ public class UITextFloat: UIView {
         textField.translatesAutoresizingMaskIntoConstraints = false
         
         textField.rightViewMode = .always
-        let buttonClose = UIButton(frame: CGRect(origin: .zero, size: CGSize(width: 10, height: 10)))
+        let buttonClose = UIButton(frame: CGRect(origin: .zero, size: CGSize(width: 40, height: 40)))
         buttonClose.alpha = 0
         buttonClose.setImage(UIImage(named: "clear", in: Bundle(for: type(of: self)), compatibleWith: nil), for: .normal)
         buttonClose.addTarget(self, action: #selector(self.clearText), for: .touchUpInside)
         textField.rightView = buttonClose
         return textField
     }()
-        
+    
     var delegate: UITextFloatDelegate?
     
     public override init(frame: CGRect) {
@@ -69,7 +69,8 @@ public class UITextFloat: UIView {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
+        self.initFromNib()
     }
     
     public var secureTextEntry: Bool = false {
@@ -95,21 +96,26 @@ public class UITextFloat: UIView {
     }
     func initFromNib() {
         clipsToBounds = true
+        contentView.backgroundColor = .blue
+        backgroundColor = .yellow
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         self.addSubview(contentView)
+        
         NSLayoutConstraint.activate([
-            uiTextFieldValue.heightAnchor.constraint(equalToConstant: self.textFieldHeight),
-            uiTextFieldValue.widthAnchor.constraint(equalToConstant: frame.width)
-        ])
-        NSLayoutConstraint.activate([
-            lineView.heightAnchor.constraint(equalToConstant: 1),
-            lineView.widthAnchor.constraint(equalToConstant: frame.width)
+            lineView.heightAnchor.constraint(equalToConstant: 1)
+            //            lineView.widthAnchor.constraint(equalToConstant: self.bounds.width)
         ])
         contentView.addArrangedSubview(uiLabelFlow)
         contentView.addArrangedSubview(uiTextFieldValue)
         contentView.addArrangedSubview(lineView)
         contentView.addArrangedSubview(uiLabelError)
+        
+        NSLayoutConstraint.activate([
+            uiTextFieldValue.heightAnchor.constraint(equalToConstant: self.textFieldHeight),
+            uiTextFieldValue.rightAnchor.constraint(equalTo: self.rightAnchor, constant: 0),
+            uiTextFieldValue.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 0)
+        ])
         
         self.downLabelFloating()
     }
