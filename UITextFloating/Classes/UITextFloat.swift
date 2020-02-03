@@ -142,6 +142,7 @@ public class UITextFloat: UIView {
     }
     @objc
     func uiTextFieldEndingEdit(_ textField: UITextField) {
+        self.uiTextFieldValue.rightView?.alpha = 0
         UIView.animate(withDuration: self.animateDuration) {
             if self.errorLabel?.isEmpty ?? true {
                 self.lineView.backgroundColor = UITextFloatAppearance.shared.lineDefaultColor
