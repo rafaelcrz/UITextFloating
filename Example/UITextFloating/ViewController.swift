@@ -31,6 +31,7 @@ class ViewController: UIViewController {
         UITextFloatAppearance.shared.lineTypingColor = .red
         UITextFloatAppearance.shared.lineErrorColor = .purple
         UITextFloatAppearance.shared.titleColor = .black
+        UITextFloatAppearance.shared.textColor = .black
         
         let fieldName = UITextFloat(frame: CGRect(x: 0, y: 0, width: stackView.frame.width, height: 60))
         fieldName.floatLabel = "Full name"

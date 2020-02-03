@@ -48,6 +48,7 @@ public class UITextFloat: UIView {
     }()
     public lazy var uiTextFieldValue: UITextField = {
         let textField = UITextField()
+        textField.textColor = UITextFloatAppearance.shared.textColor
         textField.placeholder = ""
         textField.addTarget(self, action: #selector(uiTextFieldEndingEdit(_:)), for: .editingDidEnd)
         textField.addTarget(self, action: #selector(EditingChanged(_:)), for: .editingChanged)
