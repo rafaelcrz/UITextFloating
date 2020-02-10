@@ -41,6 +41,7 @@ public class UITextFloat: UIView {
     }()
     lazy var uiLabelError: UILabel = {
         let label = UILabel()
+        label.numberOfLines = 0
         label.textColor = .red
         label.font = label.font.withSize(13)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -62,6 +63,14 @@ public class UITextFloat: UIView {
         textField.rightView = buttonClose
         return textField
     }()
+    
+    public var textFieldEndingEdit: (String) -> Void = {_ in }
+    
+    public var text: String {
+        get {
+            return self.uiTextFieldValue.text ?? ""
+        }
+    }
     
     var delegate: UITextFloatDelegate?
     
@@ -143,6 +152,7 @@ public class UITextFloat: UIView {
     }
     @objc
     func uiTextFieldEndingEdit(_ textField: UITextField) {
+        textFieldEndingEdit(textField.text ?? String())
         self.uiTextFieldValue.rightView?.alpha = 0
         UIView.animate(withDuration: self.animateDuration) {
             if self.errorLabel?.isEmpty ?? true {
