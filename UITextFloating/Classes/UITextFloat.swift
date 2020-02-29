@@ -18,7 +18,7 @@ protocol UITextFloatDelegate {
 public class UITextFloat: UIView {
     private let animateDuration = 0.3
     private let textFieldHeight: CGFloat = 31
-    lazy var contentView: UIStackView = {
+    lazy var uiStackViewContentView: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
         stack.distribution = .fill
@@ -116,25 +116,27 @@ public class UITextFloat: UIView {
     }
     func initFromNib() {
         clipsToBounds = true
-        contentView.frame = self.bounds
-        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        self.addSubview(contentView)
+        uiStackViewContentView.frame = self.bounds
+        uiStackViewContentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        addSubview(uiStackViewContentView)
+        uiStackViewContentView.addConstraintTo(toView: self)
         
-        NSLayoutConstraint.activate([
-            lineView.heightAnchor.constraint(equalToConstant: 1)
-            //            lineView.widthAnchor.constraint(equalToConstant: self.bounds.width)
-        ])
-        contentView.addArrangedSubview(uiLabelFlow)
-        contentView.addArrangedSubview(uiTextFieldValue)
-        contentView.addArrangedSubview(lineView)
-        contentView.addArrangedSubview(uiLabelError)
+        uiStackViewContentView.addArrangedSubview(uiLabelFlow)
+        uiStackViewContentView.addArrangedSubview(uiTextFieldValue)
+        uiStackViewContentView.addArrangedSubview(lineView)
+        uiStackViewContentView.addArrangedSubview(uiLabelError)
         
         NSLayoutConstraint.activate([
             uiTextFieldValue.heightAnchor.constraint(equalToConstant: self.textFieldHeight),
             uiTextFieldValue.rightAnchor.constraint(equalTo: self.rightAnchor, constant: 0),
-            uiTextFieldValue.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 0)
+            uiTextFieldValue.leftAnchor.constraint(equalTo: self.leftAnchor, constant: -0)
         ])
-        
+        NSLayoutConstraint.activate([
+            lineView.heightAnchor.constraint(equalToConstant: 1)
+        ])
+        NSLayoutConstraint.activate([
+            uiLabelFlow.heightAnchor.constraint(equalToConstant: 22)
+        ])
         self.downLabelFloating()
     }
     @objc
@@ -163,12 +165,12 @@ public class UITextFloat: UIView {
     fileprivate func downLabelFloating() {
         self.uiTextFieldValue.rightView?.alpha = 0
         self.uiLabelFlow.textColor = UITextFloatAppearance.shared.placeHolderColor
-        self.uiLabelFlow.transform = .init(translationX: .zero, y: 8 + (self.uiLabelFlow.font.lineHeight))
+        self.uiLabelFlow.transform = .init(translationX: .zero, y: textFieldHeight)
     }
     fileprivate func upLabelFloating() {
         self.uiTextFieldValue.rightView?.alpha = 1
         self.uiLabelFlow.textColor = UITextFloatAppearance.shared.titleColor
-        self.uiLabelFlow.transform = .identity
+        self.uiLabelFlow.transform = .init(translationX: .zero, y: -(1))
     }
     
     @objc
@@ -180,5 +182,25 @@ public class UITextFloat: UIView {
     }
     override open var intrinsicContentSize: CGSize {
         return CGSize(width: bounds.size.width, height: bounds.size.height + 10)
+    }
+}
+
+extension UIView {
+    func addToCenter(to: UIView) {
+        self.translatesAutoresizingMaskIntoConstraints = false
+        self.centerYAnchor.constraint(equalTo: to.centerYAnchor).isActive = true
+        self.centerXAnchor.constraint(equalTo: to.centerXAnchor).isActive = true
+    }
+    
+    func addConstraintTo(toView view: UIView,
+                         rightAnchor: CGFloat = 0,
+                         leftAnchor: CGFloat = 0,
+                         topAnchor: CGFloat = 0,
+                         bottomAnchor: CGFloat = 0) {
+        self.translatesAutoresizingMaskIntoConstraints = false
+        self.rightAnchor.constraint(equalTo: view.rightAnchor, constant: rightAnchor).isActive = true
+        self.leftAnchor.constraint(equalTo: view.leftAnchor, constant: leftAnchor).isActive = true
+        self.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: bottomAnchor).isActive = true
+        self.topAnchor.constraint(equalTo: view.topAnchor, constant: topAnchor).isActive = true
     }
 }
